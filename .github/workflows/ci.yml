@@ -22,5 +22,5 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Buidl with Maven
-        uses: mvn clean install
+      - name: Build with Maven
+        run : mvn clean install
