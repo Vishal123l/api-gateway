@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class RegistrationServiceImpl implements RegistrationService{
 
-    @Autowired
-    private KafkaTemplate<String,User> kafkaTemplate;
+//    @Autowired
+//    private KafkaTemplate<String,User> kafkaTemplate;
 
     public static final String KAFKA_TOPIC="user-topic";
 
@@ -19,7 +19,7 @@ public class RegistrationServiceImpl implements RegistrationService{
         User user = new User();
         for(int i=0; i<1000;i++){
             user.setName("name"+String.valueOf(i));
-            kafkaTemplate.send(KAFKA_TOPIC,user);
+//            kafkaTemplate.send(KAFKA_TOPIC,user);
             System.out.println("Registration Initiated");
         }
     }
